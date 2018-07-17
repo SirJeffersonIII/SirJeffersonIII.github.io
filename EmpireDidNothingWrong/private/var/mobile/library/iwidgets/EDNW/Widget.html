@@ -1,0 +1,123 @@
+<!--
+	For XenHTML by JunesiPhone must have XenInfo installed to get battery and weather.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta charset="utf-8">
+	<style>
+		body{
+			color:white;
+			font-size: 28px;
+			padding:0;
+			margin:0;
+		}
+		.container{
+			width: 100%;
+			height: 120px;
+		}
+		.container div{
+			margin-top: 50px;
+			position: absolute;
+			font-family: 'starlogo';
+		}
+		#time{
+			top:117.5px;
+			width: 100%;
+			text-align: center;
+			text-transform: lowercase;
+			font-family: 'starjout';
+			font-size: 34px;
+		}
+		#date{
+            text-transform: lowercase;
+			top:60px;
+			width: 100%;
+			font-size: 50px;
+			font-family: 'starjout';
+			text-align: center;
+		}
+        #logo{			
+            top:169px;
+			width: 100%;
+			text-align: center;
+			text-transform: lowercase;
+			font-family: 'starlogo';
+			font-size: 34px;
+        }
+		@font-face{
+			font-family: 'starjout';
+			src: url('fonts/starjout.ttf');
+		}
+        @font-face{
+			font-family: 'neon';
+			src: url('fonts/neon.ttf');
+		}
+		@font-face{
+			font-family: 'bebasbold';
+			src: url('fonts/bebasbold.otf');
+		}
+        @font-face{
+			font-family: 'starlogo';
+			src: url('fonts/starlogo.ttf');
+		}
+        .line1{
+			top:112px;
+            font-size: 68px;
+            font-family: 'starlogo';
+            text-align: center;
+			text-transform: uppercase;
+			vertical-align: middle;
+            align-content: center;
+            left:30%;
+		}
+		.line1:after{
+			margin-left: 101px;
+			content: "!";
+            text-align: center;
+			vertical-align: middle;
+            align-content: center;
+		}
+		.line1:before{
+			margin-left: -54px;
+			content: "@";
+            text-align: center;
+			vertical-align: middle;
+            align-content: center;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="time">12:12</div>
+        <div class="line1"></div>
+		<div id="date">Friday</div>
+        <div id="logo">#</div>
+	</div>
+
+	<script type="text/javascript" src="js/clock.js"></script>
+	<script type="text/javascript">
+
+		var doc = document,
+			timeDiv = doc.getElementById('time'),
+			dateDiv = doc.getElementById('date'),
+			batteryDiv = doc.getElementById('battery');
+
+			clock({
+		      twentyfour : !!twentyfour,
+		      padzero : true,
+		      refresh : 5000,
+		      success: function(clock){
+		        timeDiv.innerHTML = clock.hour() + ':' + clock.minute();
+		        dateDiv.innerHTML = translate[current].weekday[clock.day()];
+		      }
+		    });
+		    function mainUpdate(type){
+				if(type == "battery"){
+					batteryDiv.innerHTML = batteryPercent + "% battery";
+				}
+			}
+	</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Package: com.sirjeffersoniii.ednw
+Name: Empire Did Nothing Wrong Widget
+Version: 1.0.0
+Section: Widget
+Architecture: iphoneos-arm
+Description: Empire Did Nothing Wrong
+Author: SirJeffersonIII
+Maintainer: SirJeffersonIII
