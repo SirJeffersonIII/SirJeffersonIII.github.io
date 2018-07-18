@@ -43,14 +43,6 @@
 			src: url('fonts/starjout.ttf');
 		}
         @font-face{
-			font-family: 'neon';
-			src: url('fonts/neon.ttf');
-		}
-		@font-face{
-			font-family: 'bebasbold';
-			src: url('fonts/bebasbold.otf');
-		}
-        @font-face{
 			font-family: 'starlogo';
 			src: url('fonts/starlogo.ttf');
 		}
@@ -59,20 +51,19 @@
             font-size: 68px;
             font-family: 'starlogo';
             text-align: center;
-			text-transform: uppercase;
 			vertical-align: middle;
             align-content: center;
             left:30%;
 		}
 		.line1:after{
-			margin-left: 101px;
+			margin-left: 100px;
 			content: "!";
             text-align: center;
 			vertical-align: middle;
             align-content: center;
 		}
 		.line1:before{
-			margin-left: -54px;
+			margin-left: -55px;
 			content: "@";
             text-align: center;
 			vertical-align: middle;
@@ -82,9 +73,9 @@
 </head>
 <body>
 	<div class="container">
-		<div id="time">12:12</div>
+		<div id="time"></div>
         <div class="line1"></div>
-		<div id="date">Friday</div>
+		<div id="date"></div>
 	</div>
 
 	<script type="text/javascript" src="js/clock.js"></script>
