@@ -1,8 +1,9 @@
 Package: com.sirjeffersoniii.ednw
 Name: Empire Did Nothing Wrong
-Version: 1.0.0
-Section: Widget
+Version: 1.0.1
+Section: Widgets
 Architecture: iphoneos-arm
 Description: Empire Did Nothing Wrong
 Author: SirJeffersonIII
 Maintainer: SirJeffersonIII
+Depends: com.matchstic.xenhtml
